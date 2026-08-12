@@ -10,13 +10,28 @@ Sua skill precisa rodar antes de você enviar. Instale o servidor MCP a partir d
 
 Nunca coloque token, chave de API, ID de organização real, nome de cliente ou dado pessoal dentro de uma skill. Submissão com credencial é fechada sem revisão. Use placeholders como `<pipe_id>`.
 
+## Informações de contato
+
+Pedimos um email de contato em toda submissão, seja pelo formulário ou por pull request. O email fica na issue ou na descrição do PR e não é commitado no repositório. Usamos para dar follow-up sobre sua submissão.
+
+O nome para crédito é opcional. Se você não informar, usamos o nome de exibição do seu perfil GitHub no [SUBMISSIONS.md](SUBMISSIONS.md).
+
+Se você enviar por pull request, também recomendamos configurar o email de autor do git com o mesmo endereço de contato:
+
+```bash
+git config user.email "voce@exemplo.com"
+```
+
+Não é obrigatório e não é verificado pelo CI. Ajuda a manter o histórico de commits alinhado com sua autoria.
+
 ## Caminho 1: formulário de submissão
 
 Use este se você não tem familiaridade com git. É a rota mais curta.
 
 1. Abra uma [issue de submissão](../../issues/new?template=submit-skill.yml).
-2. Cole seu `SKILL.md` no campo da skill e preencha os campos de evidência.
-3. Envie. A gente converte sua issue em pull request e faz o commit com você como autor, então seu perfil do GitHub aparece no histórico.
+2. Preencha seu email de contato e, se quiser, um nome para crédito.
+3. Cole seu `SKILL.md` no campo da skill e preencha os campos de evidência.
+4. Envie. A gente converte sua issue em pull request e faz o commit com você como autor, então seu perfil do GitHub aparece no histórico.
 
 A autoria continua sua. A única coisa que você abre mão é do controle sobre a mensagem de commit.
 
@@ -34,7 +49,7 @@ Use este se você já trabalha com git.
    ```
 
 3. Escreva os dois arquivos. As regras estão em [Como escrever uma skill](docs/writing-a-skill.pt-BR.md).
-4. Abra o pull request e preencha o template da descrição.
+4. Abra o pull request e preencha o template da descrição, incluindo seu email de contato.
 
 ## Regras de pasta e nome
 

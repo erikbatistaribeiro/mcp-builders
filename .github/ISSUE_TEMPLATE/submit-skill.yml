@@ -24,6 +24,22 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: contact-email
+    attributes:
+      label: Contact email / Email de contato
+      description: So we can reach you about your submission. It will not be published in the repository. / Para entrarmos em contato sobre sua submissão. Não será publicado no repositório.
+      placeholder: you@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: credit-name
+    attributes:
+      label: Name for credit / Nome para crédito
+      description: Optional. How you'd like to be credited in SUBMISSIONS.md. Defaults to your GitHub display name. / Opcional. Como você quer ser creditado no SUBMISSIONS.md. Se vazio, usamos o nome do seu perfil GitHub.
+      placeholder: Jane Doe
+
   - type: dropdown
     id: language
     attributes:
