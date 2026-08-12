@@ -9,6 +9,12 @@ Enviando uma skill? Preencha. Corrigindo um typo na documentação? Apague e des
 
 **What it does / O que faz:**
 
+## Contact / Contato
+
+**Email:** <!-- so we can reach you about your submission / para entrarmos em contato sobre sua submissão -->
+
+**Name for credit / Nome para crédito:** <!-- optional / opcional -->
+
 ## The problem it solves / O problema que resolve
 
 ## What it built when you ran it / O que ela construiu quando você rodou
@@ -19,6 +25,7 @@ Enviando uma skill? Preencha. Corrigindo um typo na documentação? Apague e des
 
 ## Checklist
 
+- [ ] I provided a contact email in this description. / Informei um email de contato nesta descrição.
 - [ ] I ran this skill in a real Pipefy organization. / Rodei esta skill em uma organização Pipefy real.
 - [ ] `SKILL.md` and `EVIDENCE.md` are both in the folder. / `SKILL.md` e `EVIDENCE.md` estão os dois na pasta.
 - [ ] The frontmatter `name` matches the folder name. / O `name` do frontmatter bate com o nome da pasta.
