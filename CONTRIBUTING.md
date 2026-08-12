@@ -10,13 +10,28 @@ Your skill has to run before you submit it. Install the MCP server from the [Pip
 
 Never put a token, an API key, a real organization ID, a customer name, or personal data in a skill. Submissions containing credentials are closed without review. Use placeholders such as `<pipe_id>` instead.
 
+## Contact information
+
+We ask for a contact email with every submission, whether you use the form or a pull request. The email stays in the issue or PR description and is not committed to the repository. We use it to follow up about your submission.
+
+A name for credit is optional. If you do not provide one, we use your GitHub display name in [SUBMISSIONS.md](SUBMISSIONS.md).
+
+If you submit via pull request, we also recommend setting your git author email to the same contact address:
+
+```bash
+git config user.email "you@example.com"
+```
+
+This is not required and is not checked by CI. It helps keep the commit history aligned with your authorship.
+
 ## Path 1: the submission form
 
 Use this if you are not comfortable with git. It is the shortest route.
 
 1. Open a [skill submission issue](../../issues/new?template=submit-skill.yml).
-2. Paste your `SKILL.md` into the skill field and fill in the evidence fields.
-3. Submit. We convert your issue into a pull request and commit it with you as the author, so your GitHub profile shows up in the history.
+2. Fill in your contact email and, if you want, a name for credit.
+3. Paste your `SKILL.md` into the skill field and fill in the evidence fields.
+4. Submit. We convert your issue into a pull request and commit it with you as the author, so your GitHub profile shows up in the history.
 
 You keep authorship. The only thing you give up is control over the commit message.
 
@@ -34,7 +49,7 @@ Use this if you already work with git.
    ```
 
 3. Write both files. The rules are in [Writing a skill](docs/writing-a-skill.md).
-4. Open a pull request and fill in the description template.
+4. Open a pull request and fill in the description template, including your contact email.
 
 ## Folder and naming rules
 
