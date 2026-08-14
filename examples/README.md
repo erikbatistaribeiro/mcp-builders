@@ -4,7 +4,7 @@ These two skills are copies of skills shipping in the [Pipefy AI Toolkit](https:
 
 | Skill | Lines | What it does |
 |-------|-------|--------------|
-| [pipefy-process-design](pipefy-process-design/SKILL.md) | 121 | Consulting mode: helps a user design a process, and explicitly refuses to fire when the user already has a spec. |
+| [pipefy-process-design](pipefy-process-design/SKILL.md) | 120 | Consulting mode: helps a user design a process, and explicitly refuses to fire when the user already has a spec. |
 | [pipefy-process-intelligence](pipefy-process-intelligence/SKILL.md) | 136 | Analyst mode: diagnoses an existing pipe and improves it in rounds, showing results each round. |
 
 Read them for the shape, not for the content. What to copy is the structure: a description written as a trigger condition, an explicit list of when *not* to use the skill, named tools, ordered steps with reasons, and verifiable success criteria.

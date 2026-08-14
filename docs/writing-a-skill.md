@@ -76,7 +76,7 @@ Three things are happening there. Every step gives a reason, not just an action.
 
 ## Length
 
-Aim for the size of the reference skills, which are 121 and 136 lines. If your process genuinely needs more, take the room. Over 500 lines the validator prints a warning and we talk about it in review, but it does not reject your submission. Do not pad a skill to look thorough. Padding costs you on practicality.
+Aim for the size of the reference skills, which are 120 and 136 lines. If your process genuinely needs more, take the room. Over 500 lines the validator prints a warning and we talk about it in review, but it does not reject your submission. Do not pad a skill to look thorough. Padding costs you on practicality.
 
 ## Security rules
 

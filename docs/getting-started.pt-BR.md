@@ -38,7 +38,7 @@ Construa em uma organização onde um pipe quebrado não prejudica ninguém. Se 
 
 Antes de escrever qualquer coisa, leia estas duas. Elas estão em produção no toolkit hoje, e são o padrão contra o qual sua submissão é medida:
 
-- [pipefy-process-design](../examples/pipefy-process-design/SKILL.md), 121 linhas, uma skill de consultoria que ajuda a pessoa a desenhar um processo.
+- [pipefy-process-design](../examples/pipefy-process-design/SKILL.md), 120 linhas, uma skill de consultoria que ajuda a pessoa a desenhar um processo.
 - [pipefy-process-intelligence](../examples/pipefy-process-intelligence/SKILL.md), 136 linhas, uma skill de análise que diagnostica um pipe existente e o melhora em rodadas.
 
 Repare no que as duas têm em comum: elas dizem quando *não* devem ser acionadas, nomeiam as ferramentas exatas que usam, e cada passo é algo que um agente consegue de fato executar.

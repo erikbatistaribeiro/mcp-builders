@@ -2,7 +2,7 @@ Leia em [English](judging.md).
 
 # Como as submissões são avaliadas
 
-Este rubric é publicado antes de o programa abrir para que você escreva mirando nele. É o mesmo rubric usado para escolher as dez vencedoras.
+Esta rubrica é publicada antes de o programa abrir para que você escreva mirando nela. É a mesma rubrica usada para escolher as dez vencedoras.
 
 Toda submissão aceita ganha o selo de contribuidor e a listagem pública, independente da nota. A nota só decide os prêmios.
 
