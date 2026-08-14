@@ -91,7 +91,7 @@ Toda submissão é revisada. Espere um destes três resultados:
 - **Ajustes solicitados.** Algo está confuso, sem evidência, ou não reproduziria. A gente diz exatamente o que corrigir, e você tem até o prazo final para corrigir.
 - **Fechada.** Raro. Acontece quando a submissão contém credencial, é cópia de uma skill existente do toolkit sem contribuição nova, ou não roda.
 
-Ser aceita não é o mesmo que vencer. Tudo que é aceito ganha selo e listagem. Os dez prêmios vão para as maiores notas no [rubric](docs/judging.pt-BR.md).
+Ser aceita não é o mesmo que vencer. Tudo que é aceito ganha selo e listagem. Os dez prêmios vão para as maiores notas na [rubrica](docs/judging.pt-BR.md).
 
 ## Depois do programa
 
@@ -100,3 +100,7 @@ As skills selecionadas são adaptadas ao formato do Pipefy AI Toolkit e publicad
 ## Pedindo ajuda
 
 Abra uma [issue de dúvida](../../issues/new?template=question.yml) ou comece uma conversa em [Discussions](../../discussions). O webinar AMA ao vivo do dia 9 de setembro também é um bom lugar para levar uma skill pela metade.
+
+## Idioma
+
+O README da página inicial do GitHub é em português. A versão em inglês está em [README.en.md](README.en.md). Este guia e tudo que está em `docs/` são pares `.md` (inglês) e `.pt-BR.md` (português), em sincronia. Os templates de issue e de pull request trazem os dois idiomas no mesmo arquivo.

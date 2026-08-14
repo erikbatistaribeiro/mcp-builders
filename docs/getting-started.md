@@ -38,7 +38,7 @@ Build in an organization where a broken pipe does not hurt anyone. If your produ
 
 Before writing anything, read these two. They ship in the toolkit today and they are the standard your submission is measured against:
 
-- [pipefy-process-design](../examples/pipefy-process-design/SKILL.md), 121 lines, a consulting skill that helps a user design a process.
+- [pipefy-process-design](../examples/pipefy-process-design/SKILL.md), 120 lines, a consulting skill that helps a user design a process.
 - [pipefy-process-intelligence](../examples/pipefy-process-intelligence/SKILL.md), 136 lines, an analyst skill that diagnoses an existing pipe and improves it in rounds.
 
 Notice what they have in common: they say when *not* to fire, they name the exact tools they use, and every step is something an agent can actually execute.

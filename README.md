@@ -1,107 +1,103 @@
-Read this in [Português (BR)](README.pt-BR.md).
+Leia em [English](README.en.md).
 
-# MCP Builders by Pipefy
+<p align="center">
+  <img src="assets/cover-pt-BR.jpg" alt="MCP Builders by Pipefy — AI Toolkit Skills de Agentes" width="100%">
+</p>
 
-A program for the people who build processes in Pipefy to write the skills that teach an AI assistant to build them too.
+Um programa para quem constrói processos no Pipefy. Você escreve as skills que ensinam um assistente de IA a construí-los também.
 
-A skill is a set of instructions that tells an AI assistant how to work inside Pipefy: when to act, how to act, and which tools to use. If you run processes in Pipefy every day, you already know what works. This program turns that knowledge into something anyone can reuse.
+Uma skill é um conjunto de instruções que diz a um assistente de IA como trabalhar dentro do Pipefy: quando agir, como agir e quais ferramentas usar. Quem usa o produto no dia a dia já sabe o que funciona. Este programa transforma esse conhecimento em algo que qualquer pessoa pode reaproveitar.
 
-Submit your skill here. The selected ones are published in the official [Pipefy AI Toolkit](https://github.com/pipefy/ai-toolkit) with you credited as a co-author of the commit.
+Você publica a skill aqui. Este repositório é o programa. O servidor MCP, a CLI e o catálogo de skills ficam no [Pipefy AI Toolkit](https://github.com/pipefy/ai-toolkit). As skills selecionadas vão para lá, com crédito de autoria no commit.
 
-## Program at a glance
+## Cronograma
 
-| Milestone | Date |
-|-----------|------|
-| Invitations open | August 17 |
-| Program runs | August 27 to September 18 |
-| Live AMA webinar | September 9 |
-| Submission deadline | September 18 |
-| Winners announced | September 23 |
+| Etapa | Data |
+|-------|------|
+| Início dos convites | 17 de agosto de 2026 |
+| Programa aberto | 27 de agosto a 18 de setembro de 2026 |
+| Webinar AMA ao vivo | 9 de setembro de 2026 |
+| Prazo final de submissão | 18 de setembro de 2026 |
+| Anúncio dos vencedores | 23 de setembro de 2026 |
 
-Registration: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+Inscrição: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
 
-## What you get
+## O que você ganha
 
-- **A contributor badge.** Everyone whose submission is accepted receives the "MCP Builder by Pipefy" badge, shareable on LinkedIn.
-- **Public listing.** Every accepted skill is listed in [SUBMISSIONS.md](SUBMISSIONS.md) with your name and profile.
-- **Prizes for the ten best skills**, judged against the [public rubric](docs/judging.md):
-  - If you are not a Pipefy customer: one year of the Business plan.
-  - If you are already a customer: 1,000 AI credits per month for one year.
-- **Credit in the official repository.** Selected skills are promoted into the Pipefy AI Toolkit, and you are added as co-author of the commit that publishes them.
+- **Selo de contribuidor.** Todo mundo que tiver a submissão aceita recebe o selo "MCP Builder by Pipefy" para compartilhar no LinkedIn.
+- **Listagem pública.** Toda skill aceita entra no [SUBMISSIONS.md](SUBMISSIONS.md) com seu nome e seu perfil.
+- **Prêmios para as dez melhores skills**, avaliadas pela [rubrica pública](docs/judging.pt-BR.md):
+  - Quem não é cliente Pipefy: 1 ano de plano Business.
+  - Quem já é cliente: 1.000 AI credits por mês durante 1 ano.
+- **Crédito no repositório oficial.** As skills selecionadas são levadas para o Pipefy AI Toolkit, e seu nome entra na coautoria do commit que as publica.
 
-## How to participate
+## Como participar
 
-**1. Install the toolkit.** The Pipefy MCP server, the CLI, and the skill catalog all live in the [Pipefy AI Toolkit](https://github.com/pipefy/ai-toolkit#installation), which is where you install from and where the instructions are kept current. Shortest route if you are in Claude Code:
+**1. Instale o toolkit.** O servidor MCP do Pipefy, a CLI e o catálogo de skills vivem no [Pipefy AI Toolkit](https://github.com/pipefy/ai-toolkit#installation), que é de onde você instala e onde as instruções ficam atualizadas. Rota mais curta se você está no Claude Code:
 
 ```bash
 claude mcp add --transport http --scope user --client-id pipefy-mcp pipefy https://mcp.pipefy.com/mcp
 ```
 
-Other clients, the local install, and the CLI are covered in [Getting started](docs/getting-started.md).
+Outros clientes, a instalação local e a CLI estão em [Primeiros passos](docs/getting-started.pt-BR.md).
 
-**2. Build and test your skill in the toolkit.** Copy the [skill template](template/SKILL.md), write your instructions, and run them for real against a Pipefy organization you control. A skill that has never run is not a skill.
+**2. Escreva e teste sua skill no toolkit.** Copie o [template de skill](template/SKILL.md), escreva suas instruções e rode de verdade em uma organização Pipefy que você controla. Skill que nunca rodou não é skill.
 
-**3. Post it here.** Two ways, pick whichever fits you:
+**3. Publique aqui.** São dois caminhos, escolha o que combina com você:
 
-- **Form (recommended if you are not a developer).** Open a [skill submission issue](../../issues/new?template=submit-skill.yml) and paste your content into the fields. We turn it into a pull request for you, with your authorship preserved.
-- **Pull request (if you are comfortable with git).** Fork this repository, create `submissions/<your-github-handle>/<skill-name>/`, and open a pull request. Details in [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Formulário (recomendado se você não é pessoa desenvolvedora).** Abra uma [issue de submissão](../../issues/new?template=submit-skill.yml) e cole seu conteúdo nos campos. A gente transforma em pull request preservando sua autoria.
+- **Pull request (se você já usa git).** Faça um fork deste repositório, crie `submissions/<seu-usuario-github>/<nome-da-skill>/` e abra o pull request. Detalhes em [CONTRIBUTING.pt-BR.md](CONTRIBUTING.pt-BR.md).
 
-## What goes in a submission
+## O que compõe uma submissão
 
 ```
-submissions/<your-github-handle>/<skill-name>/
-├── SKILL.md       # the skill itself, in the template format
-└── EVIDENCE.md    # proof it ran, and the process problem it solves
+submissions/<seu-usuario-github>/<nome-da-skill>/
+├── SKILL.md       # a skill em si, no formato do template
+└── EVIDENCE.md    # a prova de que rodou, e o problema de processo que resolve
 ```
 
-`SKILL.md` follows the [template](template/SKILL.md), which is the same format used by the skills already shipping in the Pipefy AI Toolkit. `EVIDENCE.md` is short: the problem, what the skill built in Pipefy, and a screenshot or transcript of it running. Evidence is 15 percent of your score, and it is what separates a skill that works from a skill that reads well.
+O `SKILL.md` segue o [template](template/SKILL.md), que é o mesmo formato das skills que já estão no Pipefy AI Toolkit. O `EVIDENCE.md` é curto: o problema, o que a skill construiu no Pipefy, e um print ou transcrição da execução. A evidência vale 15 por cento da nota, e é o que separa uma skill que funciona de uma skill que só está bem escrita.
 
-Two real skills are included as reference: [pipefy-process-design](examples/pipefy-process-design/SKILL.md) and [pipefy-process-intelligence](examples/pipefy-process-intelligence/SKILL.md). Both ship in the toolkit today.
+Duas skills reais entram como referência: [pipefy-process-design](examples/pipefy-process-design/SKILL.md) e [pipefy-process-intelligence](examples/pipefy-process-intelligence/SKILL.md). As duas estão em produção no toolkit hoje.
 
-## How submissions are judged
+## Como as submissões são avaliadas
 
-| Criterion | Weight |
-|-----------|--------|
-| Process impact | 30% |
-| Practicality and reproducibility | 25% |
-| Correct use of the MCP | 20% |
-| Evidence that it ran | 15% |
-| Reusability by other companies | 10% |
+| Critério | Peso |
+|----------|------|
+| Impacto no processo | 30% |
+| Praticidade e reprodutibilidade | 25% |
+| Uso correto do MCP | 20% |
+| Evidência de execução | 15% |
+| Reusabilidade por outras empresas | 10% |
 
-The full rubric, including what disqualifies a submission, is public in [docs/judging.md](docs/judging.md). Read it before you write. It is the same rubric used to pick the ten winners.
+A rubrica completa, incluindo o que desqualifica uma submissão, está pública em [docs/judging.pt-BR.md](docs/judging.pt-BR.md). Leia antes de escrever. É a mesma rubrica usada para escolher as dez vencedoras.
 
-## Where things live
+## Onde fica cada coisa
 
-| You want to | Go to |
-|-------------|-------|
-| Install the MCP server, CLI, or SDK | [pipefy/ai-toolkit](https://github.com/pipefy/ai-toolkit) |
-| Learn the skill format | [docs/writing-a-skill.md](docs/writing-a-skill.md) |
-| Register for the program | [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders) |
-| Post your skill | [Submission issue](../../issues/new?template=submit-skill.yml) or a pull request here |
-| Ask a question | [Discussions](../../discussions) or an [issue](../../issues/new?template=question.yml) |
+| Se você quer | Vá para |
+|--------------|---------|
+| Instalar o servidor MCP, a CLI ou o SDK | [pipefy/ai-toolkit](https://github.com/pipefy/ai-toolkit) |
+| Aprender o formato de skill | [docs/writing-a-skill.pt-BR.md](docs/writing-a-skill.pt-BR.md) |
+| Se inscrever no programa | [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders) |
+| Publicar sua skill | [Issue de submissão](../../issues/new?template=submit-skill.yml) ou um pull request aqui |
+| Tirar uma dúvida | [Discussions](../../discussions) ou uma [issue](../../issues/new?template=question.yml) |
 
-This repository holds the program and the submissions, and nothing else. There is no server here and nothing to install. The MCP server, the CLI, the SDK, and the full skill catalog live in the [Pipefy AI Toolkit](https://github.com/pipefy/ai-toolkit), which is the only place install instructions are maintained.
+Este repositório guarda o programa e as submissões, e nada além disso. Não há servidor aqui e não há nada para instalar. O servidor MCP, a CLI, o SDK e o catálogo completo de skills vivem no [Pipefy AI Toolkit](https://github.com/pipefy/ai-toolkit), que é o único lugar onde as instruções de instalação são mantidas.
 
-The practical shape of that: you install and work in the toolkit, you read [its skills](https://github.com/pipefy/ai-toolkit/tree/main/skills) for reference, and you come here to read the rules and post your submission.
+## Perguntas frequentes
 
-## Frequently asked questions
+**Preciso saber programar?** Não. Você precisa conhecer um processo bem o suficiente para explicá-lo passo a passo. O formulário de submissão existe justamente para que git não seja pré-requisito.
 
-**Do I need to know how to program?** No. You need to know a process well enough to explain it step by step. The submission form exists so that git is not a requirement.
+**Preciso de uma conta paga do Pipefy?** Não. Conta gratuita funciona. Você precisa ter acesso de Pipe Admin ou Org Admin para construir o que sua skill descreve.
 
-**Do I need a paid Pipefy account?** No. Free accounts work. You do need Pipe Admin or Org Admin access to build what your skill describes.
+**Posso enviar mais de uma skill?** Pode. Cada uma é avaliada separadamente.
 
-**Can I submit more than one skill?** Yes. Each one is judged on its own.
+**Posso escrever em português?** Pode. Inglês é preferencial porque o toolkit é em inglês, mas submissões em português são aceitas e a tradução fica com a gente quando a skill for promovida.
 
-**Can I write in Portuguese?** Yes. English is preferred because the toolkit is in English, but Portuguese submissions are accepted and we handle the translation when a skill is promoted.
+**De quem é a minha skill?** Seu nome aparece como crédito onde a skill for publicada. Ao enviar, ela entra sob [Apache 2.0](LICENSE).
 
-**Who owns my skill?** You wrote it, and you are credited wherever it appears. Contributions to this repository are published under [Apache 2.0](LICENSE), the same license as the toolkit.
+**Pessoas da Pipefy participam?** Podem contribuir com skills, mas não concorrem aos prêmios.
 
-**Do Pipefy employees participate?** They can contribute skills, but they are not eligible for prizes.
+## Código de conduta e licença
 
-## Language
-
-The README, the contributing guide, and everything under `docs/` are maintained in English and Portuguese, as `.md` and `.pt-BR.md` pairs kept in sync. The issue and pull request templates carry both languages in the same file.
-
-## Code of conduct and license
-
-Participation is covered by our [Code of Conduct](CODE_OF_CONDUCT.md). Content in this repository is licensed under [Apache 2.0](LICENSE).
+A participação é regida pelo nosso [Código de Conduta](CODE_OF_CONDUCT.md). O conteúdo deste repositório é licenciado sob [Apache 2.0](LICENSE).

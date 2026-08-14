@@ -76,7 +76,7 @@ Três coisas acontecem aí. Todo passo dá um motivo, não só uma ação. A ord
 
 ## Tamanho
 
-Mire no tamanho das skills de referência, que têm 121 e 136 linhas. Se o seu processo realmente precisa de mais, use o espaço. Acima de 500 linhas o validador emite um aviso e a gente conversa na revisão, mas não reprova a submissão. Não infle uma skill para parecer completa. Enchimento custa pontos em praticidade.
+Mire no tamanho das skills de referência, que têm 120 e 136 linhas. Se o seu processo realmente precisa de mais, use o espaço. Acima de 500 linhas o validador emite um aviso e a gente conversa na revisão, mas não reprova a submissão. Não infle uma skill para parecer completa. Enchimento custa pontos em praticidade.
 
 ## Regras de segurança
 

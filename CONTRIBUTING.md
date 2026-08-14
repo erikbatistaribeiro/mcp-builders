@@ -100,3 +100,7 @@ Selected skills are adapted to the Pipefy AI Toolkit format and published there,
 ## Asking for help
 
 Open a [question issue](../../issues/new?template=question.yml) or start a thread in [Discussions](../../discussions). The live AMA webinar on September 9 is also a good place to bring a half-finished skill.
+
+## Language
+
+GitHub shows the repository homepage README in Portuguese. The English version is [README.en.md](README.en.md). This guide and everything under `docs/` are `.md` (English) and `.pt-BR.md` (Portuguese) pairs kept in sync. The issue and pull request templates carry both languages in the same file.
