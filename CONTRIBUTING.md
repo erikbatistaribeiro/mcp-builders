@@ -99,7 +99,7 @@ Selected skills are adapted to the Pipefy AI Toolkit format and published there,
 
 ## Asking for help
 
-Open a [question issue](../../issues/new?template=question.yml) or start a thread in [Discussions](../../discussions). The live AMA webinar on September 9 is also a good place to bring a half-finished skill.
+Open a [question issue](../../issues/new?template=question.yml) or start a thread in [Discussions](../../discussions). The live [AMA webinar on September 9, 2026](https://academy.pipefy.com/course/ask-me-anything-mcp) is also a good place to bring a half-finished skill.
 
 ## Language
 

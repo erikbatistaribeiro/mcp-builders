@@ -35,7 +35,7 @@ Cada critério recebe nota de 1 a 5 e tem um peso. A nota final é a média pond
 - Credencial, token, ID real de organização ou pipe, nome de cliente ou dado pessoal em qualquer arquivo.
 - Cópia de uma skill que já está no Pipefy AI Toolkit sem contribuição nova.
 - Skill que não roda.
-- Submissão recebida depois do prazo de 18 de setembro.
+- Submissão recebida depois do prazo de 18 de setembro de 2026.
 
 A desqualificação é da submissão, não da pessoa. Corrija antes do prazo e envie de novo.
 
@@ -52,7 +52,7 @@ Empate é resolvido primeiro por impacto no processo, depois por evidência.
 
 Pessoas da Pipefy podem contribuir com skills, mas não concorrem aos prêmios.
 
-Os vencedores são anunciados em 23 de setembro.
+Os vencedores são anunciados em 23 de setembro de 2026.
 
 ## Depois da avaliação
 

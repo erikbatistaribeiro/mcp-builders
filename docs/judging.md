@@ -35,7 +35,7 @@ Each criterion is scored 1 to 5 and weighted. The final score is the weighted av
 - Credentials, tokens, real organization or pipe IDs, customer names, or personal data in any file.
 - A copy of a skill already in the Pipefy AI Toolkit with no new contribution.
 - A skill that does not run.
-- Submissions received after the deadline of September 18.
+- Submissions received after the deadline of September 18, 2026.
 
 Disqualification is about the submission, not the person. Fix it before the deadline and resubmit.
 
@@ -52,7 +52,7 @@ Ties are broken by process impact first, then by evidence.
 
 Pipefy employees can contribute skills but are not eligible for prizes.
 
-Winners are announced on September 23.
+Winners are announced on September 23, 2026.
 
 ## After judging
 

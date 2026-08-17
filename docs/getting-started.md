@@ -53,13 +53,13 @@ Copy [`template/SKILL.md`](../template/SKILL.md) and follow [Writing a skill](wr
 
 | Milestone | Date |
 |-----------|------|
-| Program runs | August 27 to September 18 |
-| Live AMA webinar | September 9 |
-| Submission deadline | September 18 |
-| Winners announced | September 23 |
+| Invitations open | August 17, 2026 |
+| Program runs | August 27 to September 18, 2026 |
+| Live AMA webinar | [September 9, 2026](https://academy.pipefy.com/course/ask-me-anything-mcp) |
+| Submission deadline | September 18, 2026 |
+| Winners announced | September 23, 2026 |
 
-Learning track on the Pipefy Community: TODO-LINK-COMMUNITY-TRACK
-
-Webinar registration: TODO-LINK-WEBINAR-REGISTRATION
-
-Pipefy Academy: TODO-LINK-ACADEMY
+- Program registration: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+- MCP learning track on the Pipefy Community: [Jornada MCP](https://community.pipefy.com/p/jornada-mcp)
+- AMA webinar registration: [Ask Me Anything: MCP](https://academy.pipefy.com/course/ask-me-anything-mcp)
+- Live training calendar: [Academy webinars](https://academy.pipefy.com/webinars-ao-vivo)

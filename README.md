@@ -16,11 +16,14 @@ Você publica a skill aqui. Este repositório é o programa. O servidor MCP, a C
 |-------|------|
 | Início dos convites | 17 de agosto de 2026 |
 | Programa aberto | 27 de agosto a 18 de setembro de 2026 |
-| Webinar AMA ao vivo | 9 de setembro de 2026 |
+| Webinar AMA ao vivo | [9 de setembro de 2026](https://academy.pipefy.com/course/ask-me-anything-mcp) |
 | Prazo final de submissão | 18 de setembro de 2026 |
 | Anúncio dos vencedores | 23 de setembro de 2026 |
 
-Inscrição: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+- Inscrição no programa: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+- Trilha de MCP na Comunidade: [Jornada MCP](https://community.pipefy.com/p/jornada-mcp)
+- Registro no webinar AMA: [Ask Me Anything: MCP](https://academy.pipefy.com/course/ask-me-anything-mcp)
+- Calendário de treinamentos ao vivo: [Academy](https://academy.pipefy.com/webinars-ao-vivo)
 
 ## O que você ganha
 
@@ -79,6 +82,9 @@ A rubrica completa, incluindo o que desqualifica uma submissão, está pública 
 | Instalar o servidor MCP, a CLI ou o SDK | [pipefy/ai-toolkit](https://github.com/pipefy/ai-toolkit) |
 | Aprender o formato de skill | [docs/writing-a-skill.pt-BR.md](docs/writing-a-skill.pt-BR.md) |
 | Se inscrever no programa | [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders) |
+| Fazer a trilha de MCP na Comunidade | [Jornada MCP](https://community.pipefy.com/p/jornada-mcp) |
+| Inscrever-se no webinar AMA | [Ask Me Anything: MCP](https://academy.pipefy.com/course/ask-me-anything-mcp) |
+| Ver o calendário de treinamentos ao vivo | [Academy](https://academy.pipefy.com/webinars-ao-vivo) |
 | Publicar sua skill | [Issue de submissão](../../issues/new?template=submit-skill.yml) ou um pull request aqui |
 | Tirar uma dúvida | [Discussions](../../discussions) ou uma [issue](../../issues/new?template=question.yml) |
 
