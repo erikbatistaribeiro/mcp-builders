@@ -16,11 +16,14 @@ You submit your skill here. This repository is the program. The MCP server, the 
 |-----------|------|
 | Invitations open | August 17, 2026 |
 | Program runs | August 27 to September 18, 2026 |
-| Live AMA webinar | September 9, 2026 |
+| Live AMA webinar | [September 9, 2026](https://academy.pipefy.com/course/ask-me-anything-mcp) |
 | Submission deadline | September 18, 2026 |
 | Winners announced | September 23, 2026 |
 
-Registration: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+- Program registration: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+- MCP learning track on the Pipefy Community: [Jornada MCP](https://community.pipefy.com/p/jornada-mcp)
+- AMA webinar registration: [Ask Me Anything: MCP](https://academy.pipefy.com/course/ask-me-anything-mcp)
+- Live training calendar: [Academy webinars](https://academy.pipefy.com/webinars-ao-vivo)
 
 ## What you get
 
@@ -79,6 +82,9 @@ The full rubric, including what disqualifies a submission, is public in [docs/ju
 | Install the MCP server, CLI, or SDK | [pipefy/ai-toolkit](https://github.com/pipefy/ai-toolkit) |
 | Learn the skill format | [docs/writing-a-skill.md](docs/writing-a-skill.md) |
 | Register for the program | [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders) |
+| Follow the MCP learning track | [Jornada MCP](https://community.pipefy.com/p/jornada-mcp) |
+| Register for the AMA webinar | [Ask Me Anything: MCP](https://academy.pipefy.com/course/ask-me-anything-mcp) |
+| See live training dates | [Academy calendar](https://academy.pipefy.com/webinars-ao-vivo) |
 | Post your skill | [Submission issue](../../issues/new?template=submit-skill.yml) or a pull request here |
 | Ask a question | [Discussions](../../discussions) or an [issue](../../issues/new?template=question.yml) |
 

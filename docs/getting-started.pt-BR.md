@@ -53,13 +53,13 @@ Copie o [`template/SKILL.md`](../template/SKILL.md) e siga [Como escrever uma sk
 
 | Etapa | Data |
 |-------|------|
-| Programa aberto | 27 de agosto a 18 de setembro |
-| Webinar AMA ao vivo | 9 de setembro |
-| Prazo final de submissão | 18 de setembro |
-| Anúncio dos vencedores | 23 de setembro |
+| Início dos convites | 17 de agosto de 2026 |
+| Programa aberto | 27 de agosto a 18 de setembro de 2026 |
+| Webinar AMA ao vivo | [9 de setembro de 2026](https://academy.pipefy.com/course/ask-me-anything-mcp) |
+| Prazo final de submissão | 18 de setembro de 2026 |
+| Anúncio dos vencedores | 23 de setembro de 2026 |
 
-Trilha de conteúdo na Comunidade Pipefy: TODO-LINK-COMMUNITY-TRACK
-
-Inscrição no webinar: TODO-LINK-WEBINAR-REGISTRATION
-
-Pipefy Academy: TODO-LINK-ACADEMY
+- Inscrição no programa: [use.pipefy.com/mcp-builders](https://use.pipefy.com/mcp-builders)
+- Trilha de MCP na Comunidade: [Jornada MCP](https://community.pipefy.com/p/jornada-mcp)
+- Registro no webinar AMA: [Ask Me Anything: MCP](https://academy.pipefy.com/course/ask-me-anything-mcp)
+- Calendário de treinamentos ao vivo: [Academy](https://academy.pipefy.com/webinars-ao-vivo)

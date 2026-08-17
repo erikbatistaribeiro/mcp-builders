@@ -11,4 +11,4 @@ Status meanings:
 |--------|-------|----------|-----------|--------|
 | | | | | |
 
-No submissions yet. The program opens on August 27.
+No submissions yet. The program opens on August 27, 2026.

@@ -99,7 +99,7 @@ As skills selecionadas são adaptadas ao formato do Pipefy AI Toolkit e publicad
 
 ## Pedindo ajuda
 
-Abra uma [issue de dúvida](../../issues/new?template=question.yml) ou comece uma conversa em [Discussions](../../discussions). O webinar AMA ao vivo do dia 9 de setembro também é um bom lugar para levar uma skill pela metade.
+Abra uma [issue de dúvida](../../issues/new?template=question.yml) ou comece uma conversa em [Discussions](../../discussions). O [webinar AMA ao vivo do dia 9 de setembro de 2026](https://academy.pipefy.com/course/ask-me-anything-mcp) também é um bom lugar para levar uma skill pela metade.
 
 ## Idioma
 

@@ -3,6 +3,15 @@ contact_links:
   - name: Register for the program / Inscrever-se no programa
     url: https://use.pipefy.com/mcp-builders
     about: Sign up for MCP Builders by Pipefy. / Faça sua inscrição no MCP Builders by Pipefy.
+  - name: MCP learning track / Trilha de MCP
+    url: https://community.pipefy.com/p/jornada-mcp
+    about: Community track for the program. / Trilha de MCP na Comunidade Pipefy.
+  - name: AMA webinar / Webinar AMA
+    url: https://academy.pipefy.com/course/ask-me-anything-mcp
+    about: Register for the September 9, 2026 AMA. / Inscreva-se no webinar AMA de 9 de setembro de 2026.
+  - name: Live training calendar / Calendário de treinamentos ao vivo
+    url: https://academy.pipefy.com/webinars-ao-vivo
+    about: Academy calendar of live webinars, including MCP. / Calendário da Academy; o webinar de MCP está nele.
   - name: Pipefy AI Toolkit
     url: https://github.com/pipefy/ai-toolkit
     about: Install the MCP server, CLI, and SDK. Report toolkit bugs here. / Instale o servidor MCP, a CLI e o SDK. Reporte bugs do toolkit lá.
