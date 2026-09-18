@@ -1,12 +1,12 @@
 # Analisador de Matrículas de Imóvel
 
-Leia o documento de imóvel anexado a um card do Pipefy (PDF ou imagem), envie para OCR externo, interprete as informações da matrícula e preencha automaticamente os campos do card — incluindo a decisão de **Apto / Não apto / Necessário regularização documental** para alienação fiduciária.
+Recebe o documento de imóvel anexado a um card do Pipefy (PDF ou imagem), envia para OCR externo, interpreta as informações da matrícula e preenche automaticamente os campos do card — incluindo a decisão de **Apto / Não apto / Necessário regularização documental** para alienação fiduciária.
 
 ---
 
-## When to use
+## Quando usar
 
-Use this skill when the user asks to analyze a real estate document attached to a Pipefy card:
+Usar esta skill quando o documento de imóvel for anexado a um card do Pipefy e for necessário extrair as informações da matrícula:
 
 - "Analise a matrícula do imóvel"
 - "Leia o inteiro teor e preencha os campos"
@@ -14,17 +14,17 @@ Use this skill when the user asks to analyze a real estate document attached to 
 - "O imóvel está apto para financiamento?"
 - "Extraia os dados da matrícula"
 
-**Not for:** documents that are not real estate matrícula records (standalone contracts, invoices, topographic surveys without a matrícula number). For those, use a generic document extraction skill.
+**Não usar para:** documentos que não sejam matrículas de imóvel (contratos avulsos, notas fiscais, laudos topográficos sem número de matrícula). Para esses casos, utilizar uma skill genérica de extração de documentos.
 
 ---
 
-## Prerequisites
+## Pré-requisitos
 
-- A Pipefy card with an attachment field named **"Documento Imóvel"** containing a file URL (PDF up to 40 MB, or image: JPG, PNG, TIFF).
-- The card must also contain a field **"id_card_pai"** (or equivalent label) holding the ID of a parent card in a second pipe that will receive a summary of the extracted data.
-- The **Pipe Agente** (pipe where the document lives) must have the following output fields configured:
+- Card do Pipefy com campo de anexo chamado **"Documento Imóvel"** contendo a URL do arquivo (PDF até 40 MB ou imagem: JPG, PNG, TIFF).
+- O card deve conter também o campo **"id_card_pai"** (ou rótulo equivalente) com o ID do card pai em um segundo pipe, que receberá um resumo dos dados extraídos.
+- O **Pipe Agente** (onde o documento fica) precisa ter os seguintes campos de saída configurados:
 
-  | Field ID | Display name |
+  | ID do campo | Nome de exibição |
   |---|---|
   | `n_mero_matr_cula` | Número Matrícula |
   | `tipo_de_docuemento` | Tipo de Documento Imóvel |
@@ -45,9 +45,9 @@ Use this skill when the user asks to analyze a real estate document attached to 
   | `matricula_do_iptu` | Matrícula do IPTU |
   | `leitor_funcionou` | Leitor Funcionou? |
 
-- The **Pipe CGI** (parent pipe) must have these 7 fields for the summary write-back:
+- O **Pipe CGI** (pipe pai) precisa ter estes 7 campos para receber o resumo:
 
-  | Field ID | Display name |
+  | ID do campo | Nome de exibição |
   |---|---|
   | `matr_cula_cart_rios_de_im_veis_1` | Matrícula Cartórios de Imóveis |
   | `documento_do_im_vel` | Documento do Imóvel |
@@ -57,38 +57,38 @@ Use this skill when the user asks to analyze a real estate document attached to 
   | `endere_o_do_im_vel` | Endereço do Imóvel |
   | `valor_venal_1` | Valor Venal |
 
-- The agent running this skill needs **Pipe Member or Admin** access to read and update fields on both pipes.
+- É necessário acesso de **Membro ou Admin** nos dois pipes para leitura e atualização dos campos.
 
 ---
 
-## Tools
+## Ferramentas utilizadas
 
-| Tool (MCP) | Purpose |
+| Ferramenta (MCP) | Finalidade |
 |---|---|
-| `get_card` | Retrieve the card and all its fields, including the document URL and `id_card_pai` |
-| `update_card_field` | Write extracted data to each output field on the Agente card |
-| `move_card_to_phase` | Move the Agente card to the target phase after writing fields (phase ID `334111706`) |
-| `update_card_field` (second pipe) | Write the 7-field summary to the parent CGI card using `id_card_pai` |
+| `get_card` | Busca o card e todos os seus campos, incluindo a URL do documento e o `id_card_pai` |
+| `update_card_field` | Grava os dados extraídos em cada campo do card do Pipe Agente |
+| `move_card_to_phase` | Move o card do Pipe Agente para a fase correta após a gravação (fase `334111706`) |
+| `update_card_field` (segundo pipe) | Grava o resumo de 7 campos no card pai do Pipe CGI usando o `id_card_pai` |
 
-> The OCR and AI interpretation happen via an external HTTP endpoint (`/home-equity-automation/webhooks/documents`). The MCP agent sends the document URL to this endpoint and receives the structured JSON response. No local OCR tools are needed.
+> O OCR e a interpretação do documento acontecem via endpoint HTTP externo (`/home-equity-automation/webhooks/documents`). A skill envia a URL do documento para esse endpoint e recebe de volta o JSON estruturado com os dados da matrícula. Nenhuma ferramenta local de OCR é necessária.
 
 ---
 
-## Workflow
+## Fluxo de execução
 
-### Step 1 — Fetch the card and extract the document URL
+### Passo 1 — Buscar o card e extrair a URL do documento
 
-Call `get_card` with the card ID received from the trigger (`cardFieldUpdated` on field `398567923`).
+Busca o card pelo ID recebido do gatilho (`cardFieldUpdated` no campo `398567923`).
 
-From the response, locate the field named **"Documento Imóvel"** (case-insensitive, accent-insensitive match). Extract the HTTP URL from its value using a URL regex pattern.
+Na resposta, localiza o campo **"Documento Imóvel"** (busca sem distinção de maiúsculas/minúsculas e sem acentos). Extrai a URL HTTP do valor do campo.
 
-Also locate the **"id_card_pai"** field (try labels: `id card pai`, `id_card_pai`, `card pai`, `id card cgi`) and store its value for Step 4.
+Localiza também o campo **"id_card_pai"** (tentando os rótulos: `id card pai`, `id_card_pai`, `card pai`, `id card cgi`) e armazena o valor para o Passo 4.
 
-If the document field is empty or no URL is found, stop and report the issue on the card.
+Se o campo do documento estiver vazio ou nenhuma URL for encontrada, interrompe a execução e registra o problema no card.
 
-### Step 2 — Send document to OCR endpoint
+### Passo 2 — Enviar documento para o endpoint de OCR
 
-POST the relative document URL to the OCR/AI endpoint:
+Envia a URL relativa do documento para o endpoint de OCR via POST:
 
 ```
 POST https://<ocr-host>/home-equity-automation/webhooks/documents
@@ -97,29 +97,27 @@ Ocp-Apim-Subscription-Key: <api-key>
 
 {
   "type": "imovel",
-  "documentUrl": "<relative-url-from-step-1>"
+  "documentUrl": "<url-relativa-do-passo-1>"
 }
 ```
 
-The endpoint accepts PDF (up to 40 MB) and images. It returns a structured JSON object with the extracted matrícula fields and the lending decision.
+O endpoint aceita PDF (até 40 MB) e imagens. Retorna um objeto JSON estruturado com os campos da matrícula e a decisão de crédito.
 
-### Step 3 — Normalize the response
+### Passo 3 — Normalizar a resposta
 
-Clean the JSON response from the OCR endpoint:
+Limpa o JSON retornado pelo endpoint de OCR:
 
-- Map `"não identificado"`, `"não se aplica"`, `"não há"` (and their unaccented variants) → `null`.
-- Extract nested values safely: `inalienabilidade.existe`, `inalienabilidade.detalhes`, `alienacao_fiduciaria.existe`, `alienacao_fiduciaria.detalhes`, `inscricao_cadastral.possui`, `inscricao_cadastral.detalhe`, `cep.possui`, `cep.detalhe`.
-- If neither `numero_matricula` nor `documento_analisado` is present in the response, the document was unreadable — stop and report.
+- Converte `"não identificado"`, `"não se aplica"`, `"não há"` (e variantes sem acento) → `null`.
+- Extrai valores aninhados com segurança: `inalienabilidade.existe`, `inalienabilidade.detalhes`, `alienacao_fiduciaria.existe`, `alienacao_fiduciaria.detalhes`, `inscricao_cadastral.possui`, `inscricao_cadastral.detalhe`, `cep.possui`, `cep.detalhe`.
+- Se nem `numero_matricula` nem `documento_analisado` estiverem presentes na resposta, o documento é considerado ilegível — interrompe a execução e reporta.
 
-The normalized output produces two field sets: one for the Agente pipe (18 fields) and one for the CGI parent pipe (7 fields).
+A saída normalizada gera dois conjuntos de campos: um para o Pipe Agente (18 campos) e outro para o Pipe CGI pai (7 campos).
 
-### Step 4 — Write data to the Agente card and move to phase
+### Passo 4 — Gravar dados no card do Pipe Agente e mover de fase
 
-Call `update_card_field` (or `move_card_to_phase` with `phaseFields`) to populate all 18 fields on the Agente card and move it to phase `334111706`.
+Preenche os 18 campos do card do Pipe Agente e move para a fase `334111706`.
 
-Fields written:
-
-| Field | Source |
+| Campo | Origem |
 |---|---|
 | `n_mero_matr_cula` | `response.numero_matricula` |
 | `tipo_de_docuemento` | `response.documento_analisado` |
@@ -139,11 +137,11 @@ Fields written:
 | `iptu_existe` | `response.inscricao_cadastral.possui` |
 | `matricula_do_iptu` | `response.inscricao_cadastral.detalhe` |
 
-### Step 5 — Write summary to the parent CGI card
+### Passo 5 — Gravar resumo no card pai do Pipe CGI
 
-Using the `id_card_pai` captured in Step 1, call `update_card_field` on the CGI pipe (pipe ID `306806519`) to write the 7-field summary:
+Com o `id_card_pai` capturado no Passo 1, grava o resumo de 7 campos no Pipe CGI (pipe ID `306806519`):
 
-| Field | Source |
+| Campo | Origem |
 |---|---|
 | `matr_cula_cart_rios_de_im_veis_1` | `response.numero_matricula` |
 | `documento_do_im_vel` | `response.documento_analisado` |
@@ -153,38 +151,38 @@ Using the `id_card_pai` captured in Step 1, call `update_card_field` on the CGI 
 | `endere_o_do_im_vel` | `response.endereco_imovel` |
 | `valor_venal_1` | `response.valor_venal_imovel` |
 
-If `id_card_pai` was not found in Step 1, skip this step and log a warning — the Agente card write (Step 4) still proceeds normally.
+Se o `id_card_pai` não for encontrado no Passo 1, este passo é ignorado e um aviso é registrado — a gravação no card do Pipe Agente (Passo 4) segue normalmente.
 
 ---
 
-## Decision rules
+## Regras de decisão
 
-The OCR endpoint applies these rules internally when determining `decisao_emprestimo.status`. The agent must surface them verbatim to the card fields — do not reinterpret the decision:
+O endpoint de OCR aplica estas regras internamente para determinar o `decisao_emprestimo.status`. Os valores são gravados no card exatamente como retornados — sem reinterpretação:
 
-| Condition | Status |
+| Condição | Status |
 |---|---|
 | `inalienabilidade.existe = Sim` | Não apto para alienação fiduciária |
 | `clausulas_impeditivas.identificado = Sim` | Não apto para alienação fiduciária |
-| `documento_analisado` is not a public deed (Escritura Pública) | Necessário regularização documental |
-| `alienacao_fiduciaria.existe = Sim` with active encumbrance | Não apto para alienação fiduciária |
-| None of the above conditions apply | Apto para alienação fiduciária |
+| `documento_analisado` não é Escritura Pública | Necessário regularização documental |
+| `alienacao_fiduciaria.existe = Sim` com ônus ativo | Não apto para alienação fiduciária |
+| Nenhuma das condições acima | Apto para alienação fiduciária |
 
 ---
 
-## Error handling
+## Tratamento de erros
 
-If the OCR endpoint returns an error or the document is unreadable:
+Se o endpoint de OCR retornar erro ou o documento for ilegível:
 
-- Do not write partial data to card fields.
-- Use `update_card_field` to set `leitor_funcionou` to the error status.
-- Post the error explanation in plain Portuguese (non-technical, BizOps audience) as a card comment, including a suggested palliative action.
+- Nenhum dado parcial é gravado nos campos do card.
+- O campo `leitor_funcionou` é atualizado com o status do erro.
+- Uma explicação em português claro (sem termos técnicos, voltada para equipe de operações) é postada como comentário no card, junto com uma ação paliativa sugerida.
 
 ---
 
-## Success criteria
+## Critérios de sucesso
 
-- All applicable fields on the Agente card are populated (or explicitly `null` for missing data).
-- The Agente card has been moved to phase `334111706`.
-- The 7-field summary has been written to the parent CGI card (when `id_card_pai` is available).
-- `leitor_funcionou` reflects the outcome of the operation.
-- No raw JSON is exposed to the end user.
+- Todos os campos aplicáveis do card do Pipe Agente estão preenchidos (ou explicitamente `null` quando o dado não foi encontrado).
+- O card do Pipe Agente foi movido para a fase `334111706`.
+- O resumo de 7 campos foi gravado no card pai do Pipe CGI (quando o `id_card_pai` está disponível).
+- O campo `leitor_funcionou` reflete o resultado da operação.
+- Nenhum JSON bruto é exibido para o usuário final.
