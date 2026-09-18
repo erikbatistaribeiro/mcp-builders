@@ -20,7 +20,7 @@ Usar esta skill quando o documento de imóvel for anexado a um card do Pipefy e 
 
 ## Pré-requisitos
 
-- Card do Pipefy com campo de anexo chamado **"Documento Imóvel"** contendo a URL do arquivo (PDF até 40 MB ou imagem: JPG, PNG, TIFF).
+- Card do Pipefy com campo de anexo chamado **"Documento Imóvel"** contendo a URL do arquivo (PDF até 200 MB ou imagem: JPG, PNG, TIFF).
 - O card deve conter também o campo **"id_card_pai"** (ou rótulo equivalente) com o ID do card pai em um segundo pipe, que receberá um resumo dos dados extraídos.
 - O **Pipe Agente** (onde o documento fica) precisa ter os seguintes campos de saída configurados:
 
@@ -70,7 +70,7 @@ Usar esta skill quando o documento de imóvel for anexado a um card do Pipefy e 
 | `move_card_to_phase` | Move o card do Pipe Agente para a fase correta após a gravação (fase `334111706`) |
 | `update_card_field` (segundo pipe) | Grava o resumo de 7 campos no card pai do Pipe CGI usando o `id_card_pai` |
 
-> O OCR e a interpretação do documento acontecem via endpoint HTTP externo (`/home-equity-automation/webhooks/documents`). A skill envia a URL do documento para esse endpoint e recebe de volta o JSON estruturado com os dados da matrícula. Nenhuma ferramenta local de OCR é necessária.
+> O OCR e a interpretação do documento acontecem via endpoint HTTP externo (`/home-equity-automation/webhooks/documents`). A skill envia a URL do documento para esse endpoint e recebe de volta o JSON estruturado com os dados da matrícula. Nenhuma ferramenta local de OCR é necessária. No caso optamos por usar um OCR interno dentro da Azure, mas pode ser integrado com outros como o Google Cloud Vision.
 
 ---
 
