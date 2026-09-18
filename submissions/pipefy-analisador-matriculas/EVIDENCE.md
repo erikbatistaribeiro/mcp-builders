@@ -20,7 +20,7 @@ O tempo de análise passou de 15–40 minutos para aproximadamente 30 segundos p
 
 - **Plataforma:** Pipefy iPaaS (Advanced Automations via ActivePieces) — rodando nativamente dentro do Pipefy, sem ferramenta externa de automação
 - **Trigger:** `cardFieldUpdated` no campo `398567923` (Documento Imóvel), Pipe Agente `305714516`, Org `300738585`
-- **OCR + IA:** Endpoint HTTP externo especializado em matrículas imobiliárias (`/home-equity-automation/webhooks/documents`) — aceita PDF até 40 MB e imagens
+- **OCR + IA:** Endpoint HTTP externo especializado em matrículas imobiliárias (`/home-equity-automation/webhooks/documents`) — aceita PDF até 200 MB e imagens
 - **Pipes envolvidos:**
   - Pipe Agente: `305714516` (onde o documento é anexado, 18 campos preenchidos)
   - Pipe CGI: `306806519` (card pai, 7 campos de resumo preenchidos)
