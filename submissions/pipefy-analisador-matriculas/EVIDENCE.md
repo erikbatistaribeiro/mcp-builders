@@ -30,9 +30,9 @@ O tempo de análise passou de 15–40 minutos para aproximadamente 30 segundos p
 ```
 Trigger: campo "Documento Imóvel" atualizado no card
   │
-  ├─ step_9: GET card completo via GraphQL (todos os campos)
+  ├─ step_1: GET card completo via GraphQL (todos os campos)
   │
-  ├─ step_1 (CODE): Extrair URL do documento + capturar id_card_pai
+  ├─ step_2 (CODE): Extrair URL do documento + capturar id_card_pai
   │           Normalização de nome de campo (case-insensitive, sem acento)
   │
   ├─ step_3: POST para endpoint OCR/IA
