@@ -1,4 +1,4 @@
-# Evidence — Analisador de Matrículas de Imóvel
+[# Evidence — Analisador de Matrículas de Imóvel
 
 ## O problema de processo
 
@@ -112,3 +112,4 @@ Trigger: campo "Documento Imóvel" atualizado no card
 - **Normalização robusta:** valores como "não identificado" e "não se aplica" são convertidos para `null` antes de gravar, evitando ruído nos campos do Pipefy.
 - **Resiliência:** o passo de atualização do card pai tem `continueOnFailure: true`, garantindo que a análise principal não seja bloqueada caso o `id_card_pai` esteja ausente.
 - **Rodando em produção:** esta automação está publicada (`status: PUBLISHED`) no iPaaS nativo do Pipefy, validada com documentos reais do processo de home equity da CGI.AI.
+](https://github.com/erikbatistaribeiro/mcp-builders/blob/main/submissions/erikbatistaribeiro/pipefy-analisador-matriculas/SKILL.md)
